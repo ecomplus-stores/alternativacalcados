@@ -7,23 +7,38 @@
       "autoplay": 9000,
       "slides": [
         {
-          "img": "/img/uploads/rect89.webp",
-          "link": "/headset",
+          "img": "/img/uploads/banner-alternativa.png",
+          "link": "/",
           "alt": "Headset banner",
           "start": "2020-04-11T05:54:06.750Z",
-          "end": "2020-12-31T03:00:00.000Z"
-        },
-        {
-          "img": "/img/uploads/banner2.webp",
-          "alt": "Banner sample two",
-          "start": "",
           "end": ""
         }
       ]
     },
     {
+      "type": "responsive-banner",
+      "img": "/img/uploads/frete-gratis-tarja.png",
+      "alt": "Tarja Frete",
+      "mobile_img": ""
+    },
+    {
+      "type": "custom-html",
+      "html": "<h4 class=\"brands-carousel__title\">Nossas Marcas</h4>"
+    },
+    {
+      "type": "brands-carousel",
+      "limit": 10,
+      "offset": 0,
+      "sort": null,
+      "autoplay": 1000
+    },
+    {
+      "type": "custom-html",
+      "html": "<h4 class=\"filter-carousel__title\">Compre por numeração</h4>"
+    },
+    {
       "type": "info-bar",
-      "enabled": true
+      "enabled": false
     },
     {
       "type": "collection-shelf",

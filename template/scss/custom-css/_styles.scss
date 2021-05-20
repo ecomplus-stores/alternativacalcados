@@ -1,1 +1,88 @@
 // Add your custom CSS here.
+.header {
+    background-color: #230B93;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+    i {
+        color: #fff;
+    }
+}
+.top-bar__countdown {
+    background-color: #fff;
+    overflow-x: hidden;
+    * {
+        color: #000;
+        font-weight: bold;
+    }
+}
+@media (min-width: 992px) {
+    .banner-slider {
+      max-width: 100%;
+      max-height: calc(100rem*var(--banner-aspect-ratio))
+    }
+}
+#menu {
+    background-color: #333333;
+    a {
+        color: #fff;
+        padding: 1rem;
+    }
+    .header__nav {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    } 
+}
+@media(min-width: 992px) {
+    .info__icon {
+        display: flex;
+    }
+    .info-icon__nav .col-auto {
+        max-width: 20%
+    }
+    .icon, .icon img {
+        height: 80.34px;
+    }
+}
+@media(max-width: 992px) {
+    .info__icon {
+        display: flex;
+    }
+    .info-icon__nav .col-auto {
+        max-width: 50%;
+        padding: auto;
+    }
+}
+.responsive-baner .container, .page-title {
+    background-color: #fff;
+}
+.page--home, .footer {
+    background-color: #CBCBCB;
+    .container {
+        background-color: #fff;
+    }
+}
+.footer {
+    border-top: none;
+    padding: 0 inherit;
+    .container {
+        padding-top: 1.5rem;
+    }
+}
+.page-title {
+    margin-bottom: 0;
+}
+.page--home .sections {
+    padding-bottom: 0;
+}
+.brands-carousel__title, .filter-carousel__title {
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: var(--spacer-3);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}

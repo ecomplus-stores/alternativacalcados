@@ -1,0 +1,17 @@
+<% if (Array.isArray(opt.icons) && opt.icons.length) { %>
+  <section class="info-icon">
+    <div class="container">
+      <div class="info-icon__nav row">
+        <% opt.icons.forEach(({ link, img, alt }) => { %>
+          <div class="col-auto col-sm-6 col-lg">
+            <a class="info__icon" href="<%= link || 'javascript:;' %>">
+              <span class="icon">
+                <img class="img-fluid" src="<%= img %>" alt="<%= alt %>">
+              </span>
+            </a>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+<% } %>

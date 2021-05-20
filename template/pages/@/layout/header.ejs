@@ -65,63 +65,26 @@ if (header.categories_list) {
         </a>
       <% } else { %>
         <div class="top-bar__countdown" style="<%= marketingStripeStyle %>">
-          <%= header.marketing_stripe.text %>
+          <div class="row">
+            <div class="col-md-11 col-12">
+              <%= header.marketing_stripe.text %>
+            </div>
+            <div class="col-md-1 col-12">
+              <% if (header.contacts_stripe.socials) { %>
+                <% networks.forEach(network => { %>
+                  <% if (contacts[network]) { %>
+                    <a href="<%= contacts[network] %>" target="_blank" rel="noopener">
+                      <i class="fab fa-<%= network %>"></i>
+                    </a>
+                  <% } %>
+                <% }) %>
+              <% } %>
+            </div>
+          </div>
         </div>
       <% } %>
     <% } %>
   <% } %>
-
-  <div class="top-bar__nav d-none d-md-block">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <nav class="top-bar__page-links">
-            <% if (header.contacts_stripe.pages) { %>
-              <% header.contacts_stripe.pages.forEach(({ link, title }) => { %>
-                <a href="<%= link %>"><%= title %></a>
-              <% }) %>
-            <% } %>
-          </nav>
-          <% if (header.contacts_stripe.phone_wpp) { %>
-            <% if (contacts.whatsapp) { %>
-              <a
-                href="javascript:;"
-                target="_blank"
-                rel="noopener"
-                class="whatsapp-link"
-                data-tel="<%= contacts.whatsapp.replace(/\D/g, '') %>"
-              >
-                <i class="fab fa-whatsapp"></i>
-                <%= contacts.whatsapp %>
-              </a>
-            <% } %>
-            <% if (contacts.phone) { %>
-              <a
-                href="tel:+<%= contacts.phone.replace(/\D/g, '') %>"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fas fa-phone"></i>
-                <%= contacts.phone %>
-              </a>
-            <% } %>
-          <% } %>
-        </div>
-        <% if (header.contacts_stripe.socials) { %>
-          <div class="col-auto">
-            <% networks.forEach(network => { %>
-              <% if (contacts[network]) { %>
-                <a href="<%= contacts[network] %>" target="_blank" rel="noopener">
-                  <i class="fab fa-<%= network %>"></i>
-                </a>
-              <% } %>
-            <% }) %>
-          </div>
-        <% } %>
-      </div>
-    </div>
-  </div>
-</div>
 
 <header class="header" id="header">
   <div class="header__container container-fluid">
@@ -212,11 +175,9 @@ if (header.categories_list) {
         </div>
       </div>
 
-      <% if (header.search_input) {
-        const searchColSize = !isCategoriesNavFull && categories.length ? '-3' : ''
-        %>
+      <% if (header.search_input) { %>
         <div
-          class="d-none d-lg-block col-12 col-lg<%= searchColSize %> collapse show"
+          class="d-none d-lg-block col-12 col-lg collapse show"
           id="search-bar"
         >
           <form
@@ -264,18 +225,20 @@ if (header.categories_list) {
           <% } %>
         </div>
       <% } %>
-
-      <% if (categories && categories.length) { %>
-        <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
-          <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
-            <% categories.forEach(({ slug, name }) => { %>
-              <a href="javascript:;" onclick="toggleSidenav('<%= slug %>')">
-                <%= ` ${name} ` %>
-              </a>
-            <% }) %>
-          </nav>
-        </div>
-      <% } %>
     </div>
   </div>
+  <% if (categories && categories.length) { %>
+    <div id="menu" class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
+      <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
+        <a href="javascript:;">Home</a>
+        <% categories.forEach(({ slug, name }) => { %>
+          <a href="javascript:;" onclick="toggleSidenav('<%= slug %>')">
+            <%= ` ${name} ` %>
+          </a>
+        <% }) %>
+        <a href="javascript:;">Marcas</a>
+        <a href="javascript:;">Categorias</a>
+      </nav>
+    </div>
+  <% } %>
 </header>
