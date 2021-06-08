@@ -16,6 +16,10 @@
       ]
     },
     {
+      "type": "custom-html-home",
+      "html": "<div class=\"row\"><div class=\"container home-container\" ></div></div>"
+    },
+    {
       "type": "responsive-banner",
       "img": "/img/uploads/frete-gratis-tarja.png",
       "alt": "Tarja Frete",
