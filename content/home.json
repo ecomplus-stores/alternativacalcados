@@ -41,6 +41,119 @@
       "html": "<h4 class=\"filter-carousel__title\">Compre por numeração</h4>"
     },
     {
+      "type": "category-filters",
+      "banners": [
+        {
+          "img": "/img/uploads/MENINA.png",
+          "alt": "Menina",
+          "link": "/",
+          "items": [
+            {
+              "text": "P"
+            },
+            {
+              "text": "M"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "P"
+            },
+            {
+              "text": "M"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "P"
+            },
+            {
+              "text": "M"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "G"
+            }
+          ]
+        },
+        {
+          "img": "/img/uploads/MENINO.png",
+          "alt": "Menino",
+          "link": "/",
+          "items": [
+
+          ]
+        },
+        {
+          "img": "/img/uploads/MENINA.png",
+          "alt": "Menina",
+          "link": "/",
+          "items": [
+            {
+              "text": "P"
+            },
+            {
+              "text": "M"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "P"
+            },
+            {
+              "text": "M"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "P"
+            },
+            {
+              "text": "M"
+            },
+            {
+              "text": "G"
+            },
+            {
+              "text": "G"
+            }
+          ]
+        },
+        {
+          "img": "/img/uploads/MENINO.png",
+          "alt": "Menino",
+          "link": "/",
+          "items": [
+
+          ]
+        }
+      ]
+    },
+    {
       "type": "info-bar",
       "enabled": false
     },

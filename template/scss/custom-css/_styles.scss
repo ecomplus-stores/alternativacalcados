@@ -65,8 +65,9 @@
     }
 }
 
-.page-title {
+.page--home .page-title {
     margin-bottom: 0;
+    padding-bottom: 1rem;
 }
 .page--home .sections {
     padding-bottom: 0;
@@ -89,4 +90,61 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
+}
+#terceira-linha {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: var(--spacer-3);
+    }
+    * {
+        color: #fff
+    }
+    background-color: rgb(117, 116, 116);
+}
+
+.footer {
+    background-color: #CBCBCB;
+    #primeira-linha {
+        background-color: #230B93;
+        padding: var(--spacer-3);
+    }
+    #segunda-linha {
+        background-color: #fff;
+    }
+    * {
+        color: #fff
+    }
+}
+#list-var {
+    padding-left: 0;
+    li {
+        list-style: none;
+        border: .5px solid #ccc;
+        border-radius: 100%;
+        padding: 5px;
+        margin-top: 5px;
+        margin-right: 5px;
+        a {
+            padding: 5px;
+        }
+    }
+}
+.header__search-input {
+    background-color: transparent;
+    border-bottom: .5px solid #fff;
+    border-radius: 0;
+}
+.header__row {
+    padding: var(--spacer-3);
+}
+@media(min-width: 767px) {
+    .header__logo {
+        padding: 10px;
+    }
+}
+.footer__payment-methods {
+    margin-bottom: 0;
 }
