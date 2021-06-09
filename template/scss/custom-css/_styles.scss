@@ -148,3 +148,12 @@
 .footer__payment-methods {
     margin-bottom: 0;
 }
+.footer {
+    padding-bottom: 0 !important;
+}
+#container-home {
+    margin-top: -20px;
+}
+.product__buy + .mb-3 {
+    display: none;
+}

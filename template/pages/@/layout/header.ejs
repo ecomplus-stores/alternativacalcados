@@ -67,7 +67,10 @@ if (header.categories_list) {
         <div class="top-bar__countdown" style="<%= marketingStripeStyle %>">
           <div class="row">
             <div class="col-md-11 col-12">
-              <%= header.marketing_stripe.text %>
+              <span>
+                <%= header.marketing_stripe.text %>
+              </span>
+              
             </div>
             <div class="col-md-1 col-12">
               <% if (header.contacts_stripe.socials) { %>
