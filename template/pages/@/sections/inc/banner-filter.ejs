@@ -30,7 +30,7 @@ if (opt.img) {
 
   %>
 
-  <div class="banner">
+  <div class="banner" id="banner-category">
     <a
       href="<%= opt.link || 'javascript:;' %>"
       aria-label="<%= opt.alt %>"
@@ -63,13 +63,15 @@ if (opt.img) {
       </picture>
     </a>
     <% if(opt.items.length) { %>
-      <ul id="list-var" class="stamps">
+      <div>
+        <ul id="list-var" class="stamps">
           <% for (let i = 0; i < opt.items.length; i++) { %>
             <li class="">
               <a href="search?filters[]=tamanhos:<%=opt.items[i].text %>"><%=opt.items[i].text %></a>
             </li>
           <% } %>
       </ul>
+      </div>
     <% } %>
   </div>
   <%

@@ -58,7 +58,7 @@
 .responsive-baner .container, .page-title {
     background-color: #fff;
 }
-.page--home {
+.page--home, .page--products {
     background-color: #CBCBCB;
     .container {
         background-color: #fff;
@@ -69,7 +69,7 @@
     margin-bottom: 0;
     padding-bottom: 1rem;
 }
-.page--home .sections {
+.page--home .sections, .page--products .sections {
     padding-bottom: 0;
 }
 .brands-carousel__title, .filter-carousel__title {
@@ -81,10 +81,7 @@
     text-transform: uppercase;
     font-weight: bold;
 }
-#page-home .footer {
-    padding-top: 0px !important;
-    border-top: none;
-}
+
 #footer-img {
     display: flex;
     align-items: center;
@@ -150,10 +147,51 @@
 }
 .footer {
     padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    border-top: none;
 }
 #container-home {
     margin-top: -20px;
 }
 .product__buy + .mb-3 {
     display: none;
+}
+#product-block {
+    margin-bottom: 0;
+}
+#product-actions .product__buy button {
+    span {
+        font-size: 0;
+        &::after {
+            content: 'Adicionar na Sacola';
+            font-size: 1.2rem;
+        }
+    }
+    border-radius: 20px;
+    background-color: #FF8815;
+    border-color: #FF8815;
+}
+
+.shipping-calculator__form .input-group .input-group-append {
+    border-radius: 15px;
+    background-color: #FF8815;
+    margin-left: .5rem;
+    button {
+        border-color: white;
+    }  
+    i {
+        font-size: 0;
+        &::after {
+            content: "Conferir";
+            font-size: 1rem;
+            color: #fff;
+        }
+    }
+}
+#banner-category {
+    max-width: 100%;
+}
+#shipping-calculator-zip {
+    background-color: #ccc;
+    border-radius: 0;
 }
