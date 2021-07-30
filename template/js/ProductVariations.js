@@ -23,7 +23,7 @@ import {
       selectedId: String,
       maxOptionsBtns: {
         type: Number,
-        default: 6
+        default: 100
       },
       gridsData: {
         type: Array,
@@ -52,6 +52,17 @@ import {
   
       orderedGrids () {
         return Object.keys(this.variationsGrids)
+      },
+
+      variationsImgs () {
+        const interestInfo = []
+        this.product.variations.forEach(item => {
+          interestInfo.push({
+            name: item.name.split('/').pop().trim(),
+            imgChosen: item.picture_id ? this.product.pictures.find(img => img._id === item.picture_id).normal.url : false
+          })
+        })
+        return interestInfo
       }
     },
   

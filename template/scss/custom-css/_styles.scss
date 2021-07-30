@@ -195,3 +195,18 @@
     background-color: #ccc;
     border-radius: 0;
 }
+.variations__grid--escolha_a_capa {
+    max-height: 300px;
+    overflow: auto;
+    .variations__option {
+        img {
+            width: 20%;
+        }
+        border: 0;
+        background-color: none;
+    }
+}
+//.arte-capa {
+//    display: flex;
+//    flex-direction: column;
+//}
