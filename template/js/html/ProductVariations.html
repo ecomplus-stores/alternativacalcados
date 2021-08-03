@@ -29,7 +29,7 @@
       </span>
     </div>
 
-    <template v-if="options.length <= maxOptionsBtns">
+    <template v-if="options.length">
       <button
         v-for="(optionText, i) in options"
         class="variations__option btn btn-light"
@@ -46,7 +46,7 @@
             :src="variationsImgs[i].imgChosen" 
             :alt="optionText"
           >
-          <span>
+          <span class="text-with-img">
             {{ optionText }}
           </span>
         </span>
