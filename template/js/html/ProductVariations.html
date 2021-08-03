@@ -59,23 +59,5 @@
       </button>
 
     </template>
-
-    <select
-      v-else
-      class="variations__select custom-select"
-      @change="$event => selectOption($event.target.value, grid, index)"
-    >
-      <option :selected="!selectedOptions[grid]">
-        {{ i19select }}...
-      </option>
-      <option
-        v-for="optionText in options"
-        :value="optionText"
-        :selected="selectedOptions[grid] === optionText"
-        :disabled="!filteredGrids[grid].includes(optionText)"
-      >
-        {{ optionText }}
-      </option>
-    </select>
   </div>
 </div>
